@@ -1,0 +1,35 @@
+main_cids=121,122,304,326,106,116,117,335,157,119,337,307,312,118,152,101,102,350,343,344,355,345,755,40,318,115,310,323,114,44,313,301,113,120,107,108
+skip_detect_cids=90,100,108
+#是否使用3D模型进行碰撞检测
+use_3d_check=0
+object3d_model_dir=
+model_granularity=100
+#一种类型的房间预分配内存支持对象数
+num_dectector_objects = 8
+#碰撞检测通路阈值。单位：毫米
+window_front_thres=200
+min_door_thres=200
+max_door_thres=100
+#下面是核心配置
+#表示填入图为input_segs*input_segs
+input_segs=64
+#表示填出图为output_segs*output_segs
+output_segs=16
+#表示填出图角度精度。其对应单位角为360 / num_rots
+num_rots=4
+#多个以,分隔开。下面两个分别对应空间边长与空间类型id
+room_metadatas=1:12032,2:6400,3:12032,4:3584,5:4864,6:6656,7:4864,8:5888,9:3584,10:5888,11:6144,12:3584
+#结果数
+search_width = 14
+#大于search_width，一般取2*search_width
+topk=8
+#以输出格子为单位，碰撞检测的精度
+error_thres=2
+#以输入格子为单位，生成几格墙
+wall_thickness_thres=1
+#是否使用外包表达家具
+only_bound=0
+#是否需要执行碰撞检测
+open_collsion_crash=1
+#支持的最大功能区个数
+max_zone_thres=10
